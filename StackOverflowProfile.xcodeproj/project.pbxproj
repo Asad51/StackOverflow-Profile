@@ -17,6 +17,10 @@
 		DC12B1472B6FD8D6000F1136 /* SOPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1462B6FD8D6000F1136 /* SOPTextField.swift */; };
 		DC12B1492B6FE9F5000F1136 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1482B6FE9F5000F1136 /* ProfileViewController.swift */; };
 		DC12B14B2B6FF231000F1136 /* LanidingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B14A2B6FF231000F1136 /* LanidingViewController.swift */; };
+		DC12B1502B6FFD1F000F1136 /* SOPTitleLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B14F2B6FFD1F000F1136 /* SOPTitleLabel.swift */; };
+		DC12B1522B6FFEA3000F1136 /* SOPBodyLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1512B6FFEA3000F1136 /* SOPBodyLabel.swift */; };
+		DC12B1542B6FFFA0000F1136 /* SOPAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1532B6FFFA0000F1136 /* SOPAlertViewController.swift */; };
+		DC12B1572B700747000F1136 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1562B700747000F1136 /* UIViewController+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		DC12B1462B6FD8D6000F1136 /* SOPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPTextField.swift; sourceTree = "<group>"; };
 		DC12B1482B6FE9F5000F1136 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		DC12B14A2B6FF231000F1136 /* LanidingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanidingViewController.swift; sourceTree = "<group>"; };
+		DC12B14F2B6FFD1F000F1136 /* SOPTitleLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPTitleLabel.swift; sourceTree = "<group>"; };
+		DC12B1512B6FFEA3000F1136 /* SOPBodyLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPBodyLabel.swift; sourceTree = "<group>"; };
+		DC12B1532B6FFFA0000F1136 /* SOPAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPAlertViewController.swift; sourceTree = "<group>"; };
+		DC12B1562B700747000F1136 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +74,8 @@
 			children = (
 				DC12B1422B6FCE8A000F1136 /* App */,
 				DC12B1412B6FCE80000F1136 /* Controllers */,
-				DC12B1432B6FD5A4000F1136 /* Views */,
+				DC12B1432B6FD5A4000F1136 /* CustomComponents */,
+				DC12B1552B700714000F1136 /* Extensions */,
 				DC12B1322B6FC850000F1136 /* Assets.xcassets */,
 				DC12B1342B6FC850000F1136 /* LaunchScreen.storyboard */,
 				DC12B1372B6FC850000F1136 /* Info.plist */,
@@ -94,13 +103,24 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		DC12B1432B6FD5A4000F1136 /* Views */ = {
+		DC12B1432B6FD5A4000F1136 /* CustomComponents */ = {
 			isa = PBXGroup;
 			children = (
 				DC12B1442B6FD5D6000F1136 /* SOPButton.swift */,
 				DC12B1462B6FD8D6000F1136 /* SOPTextField.swift */,
+				DC12B14F2B6FFD1F000F1136 /* SOPTitleLabel.swift */,
+				DC12B1512B6FFEA3000F1136 /* SOPBodyLabel.swift */,
+				DC12B1532B6FFFA0000F1136 /* SOPAlertViewController.swift */,
 			);
-			path = Views;
+			path = CustomComponents;
+			sourceTree = "<group>";
+		};
+		DC12B1552B700714000F1136 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DC12B1562B700747000F1136 /* UIViewController+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,9 +195,13 @@
 			files = (
 				DC12B13E2B6FCE35000F1136 /* SearchViewController.swift in Sources */,
 				DC12B1452B6FD5D6000F1136 /* SOPButton.swift in Sources */,
+				DC12B1542B6FFFA0000F1136 /* SOPAlertViewController.swift in Sources */,
 				DC12B12A2B6FC84F000F1136 /* AppDelegate.swift in Sources */,
+				DC12B1572B700747000F1136 /* UIViewController+Extensions.swift in Sources */,
 				DC12B1402B6FCE69000F1136 /* FavoritesViewController.swift in Sources */,
 				DC12B14B2B6FF231000F1136 /* LanidingViewController.swift in Sources */,
+				DC12B1522B6FFEA3000F1136 /* SOPBodyLabel.swift in Sources */,
+				DC12B1502B6FFD1F000F1136 /* SOPTitleLabel.swift in Sources */,
 				DC12B1492B6FE9F5000F1136 /* ProfileViewController.swift in Sources */,
 				DC12B1472B6FD8D6000F1136 /* SOPTextField.swift in Sources */,
 				DC12B12C2B6FC84F000F1136 /* SceneDelegate.swift in Sources */,

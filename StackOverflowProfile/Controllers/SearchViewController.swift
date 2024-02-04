@@ -76,7 +76,10 @@ extension SearchViewController {
     }
 
     @objc private func openProfileVC() {
-        guard isUserIdEntered else { return }
+        guard isUserIdEntered else {
+            presentSOPAlert(title: "Empty user ID", message: "Please enter an user id to search.", buttonTitle: "Ok")
+            return
+        }
 
         let profileVC = ProfileViewController()
         profileVC.userId = userIdTextField.text
