@@ -15,8 +15,6 @@ class ProfileViewController: UIViewController {
 
         view.backgroundColor = .systemBrown
         navigationController?.isNavigationBarHidden = false
-        navigationController?.navigationBar.prefersLargeTitles = true
-        tabBarController?.tabBar.isHidden = true
     }
 }
 
