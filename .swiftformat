@@ -1,0 +1,12 @@
+# format options
+--indent 4
+--extensionacl on-declarations
+--indentcase true
+--xcodeindentation true
+
+# file options
+--exclude Pods,Generated
+
+# rules
+--enable blankLinesAroundMark
+--disable acronyms
