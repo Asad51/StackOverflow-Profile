@@ -15,6 +15,7 @@
 		DC12B1402B6FCE69000F1136 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B13F2B6FCE69000F1136 /* FavoritesViewController.swift */; };
 		DC12B1452B6FD5D6000F1136 /* SOPButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1442B6FD5D6000F1136 /* SOPButton.swift */; };
 		DC12B1472B6FD8D6000F1136 /* SOPTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1462B6FD8D6000F1136 /* SOPTextField.swift */; };
+		DC12B1492B6FE9F5000F1136 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC12B1482B6FE9F5000F1136 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DC12B13F2B6FCE69000F1136 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		DC12B1442B6FD5D6000F1136 /* SOPButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPButton.swift; sourceTree = "<group>"; };
 		DC12B1462B6FD8D6000F1136 /* SOPTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SOPTextField.swift; sourceTree = "<group>"; };
+		DC12B1482B6FE9F5000F1136 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 			children = (
 				DC12B13D2B6FCE35000F1136 /* SearchViewController.swift */,
 				DC12B13F2B6FCE69000F1136 /* FavoritesViewController.swift */,
+				DC12B1482B6FE9F5000F1136 /* ProfileViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 				DC12B1452B6FD5D6000F1136 /* SOPButton.swift in Sources */,
 				DC12B12A2B6FC84F000F1136 /* AppDelegate.swift in Sources */,
 				DC12B1402B6FCE69000F1136 /* FavoritesViewController.swift in Sources */,
+				DC12B1492B6FE9F5000F1136 /* ProfileViewController.swift in Sources */,
 				DC12B1472B6FD8D6000F1136 /* SOPTextField.swift in Sources */,
 				DC12B12C2B6FC84F000F1136 /* SceneDelegate.swift in Sources */,
 			);

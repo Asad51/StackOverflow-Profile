@@ -8,9 +8,13 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    let logoImageView = UIImageView()
-    let usernameTextField = SOPTextField()
-    let searchButton = SOPButton(title: "Search", backgroundColor: .systemTeal)
+    private lazy var logoImageView = UIImageView()
+    private lazy var userIdTextField = SOPTextField()
+    private lazy var searchButton = SOPButton(title: "Search", backgroundColor: .systemTeal)
+
+    private var isUserIdEntered: Bool {
+        return userIdTextField.text?.isEmpty == false
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,18 +52,20 @@ extension SearchViewController {
     }
 
     private func configureTextfield() {
-        view.addSubview(usernameTextField)
+        view.addSubview(userIdTextField)
+        userIdTextField.delegate = self
 
         NSLayoutConstraint.activate([
-            usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
-            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            usernameTextField.heightAnchor.constraint(equalToConstant: 50),
+            userIdTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
+            userIdTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            userIdTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            userIdTextField.heightAnchor.constraint(equalToConstant: 50),
         ])
     }
 
     private func configureSearchButton() {
         view.addSubview(searchButton)
+        searchButton.addTarget(self, action: #selector(openProfileVC), for: .touchUpInside)
 
         NSLayoutConstraint.activate([
             searchButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -50),
@@ -69,6 +75,16 @@ extension SearchViewController {
         ])
     }
 
+    @objc private func openProfileVC() {
+        guard isUserIdEntered else { return }
+
+        let profileVC = ProfileViewController()
+        profileVC.userId = userIdTextField.text
+        profileVC.title = userIdTextField.text
+
+        navigationController?.pushViewController(profileVC, animated: true)
+    }
+
     private func createDismissKeyboardTapGesture() {
         let tapGesture = UITapGestureRecognizer(target: self.view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
@@ -76,7 +92,14 @@ extension SearchViewController {
 }
 
 // MARK: - UITextFieldDelegate conformation
-extension SearchViewController: UITextFieldDelegate {}
+
+extension SearchViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_: UITextField) -> Bool {
+        openProfileVC()
+
+        return true
+    }
+}
 
 #Preview {
     let searchVC = UINavigationController(rootViewController: SearchViewController())
