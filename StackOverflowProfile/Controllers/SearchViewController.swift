@@ -63,6 +63,7 @@ extension SearchViewController {
     private func configureTextfield() {
         view.addSubview(userIdTextField)
         userIdTextField.delegate = self
+        userIdTextField.text = "7646289"
 
         NSLayoutConstraint.activate([
             userIdTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
