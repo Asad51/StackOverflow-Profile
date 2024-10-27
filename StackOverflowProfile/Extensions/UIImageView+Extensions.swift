@@ -23,8 +23,13 @@ extension UIImageView {
         }
     }
 
-    func rounded() {
-        layer.cornerRadius = frame.width / 2.0
+    func rounded(cornerRadius: CGFloat? = nil) {
+        if let cornerRadius {
+            layer.cornerRadius = cornerRadius
+        } else {
+            layer.cornerRadius = frame.width / 2.0
+        }
+        
         clipsToBounds = true
         layoutIfNeeded()
     }
